@@ -5,14 +5,22 @@
     >  < (_) | | (_) | |_| |
    /_/\_\___/|_|\___/ \__|_|
 
-plotgbars
-^^^^^^^^^
+# plotgbars
 
-makes a stem plot of conductance densities in a given compartment. Usage ::
+makes a stem plot of conductance densities in a given compartment. 
 
-   x.plotgbars('compartment_name');
-   x.plotgbars(axes_handle,'compartment_name');
 
+Usage:
+
+```
+x.plotgbars('compartment_name');
+x.plotgbars(axes_handle,'compartment_name');
+```
+
+!!! info "See Also"
+    ->xolotl.plot
+    ->xolotl.show
+    ->xolotl.manipulate
 
 
 %}

@@ -5,15 +5,15 @@
     >  < (_) | | (_) | |_| |
    /_/\_\___/|_|\___/ \__|_|
 
-manipulateEvaluate
-^^^^^^^^^^^^^^^^^^
+# manipulateEvaluate
 
-This method is used to update the ``xolotl`` object every time a slider is moved in the manipulate window. This is used internally in ``xolotl.manipulate``. You should not need to use this by itself. 
+This method is used to update the `xolotl` object 
+every time a slider is moved in the manipulate window. 
+This is used internally in `xolotl.manipulate`. You 
+should not need to use this by itself. 
 
-See Also
---------
-
-- xolotl.manipulate
+!!! info "See Also"
+    ->xolotl.manipulate
 
 
 %}

@@ -5,23 +5,36 @@
     >  < (_) | | (_) | |_| |
    /_/\_\___/|_|\___/ \__|_|
 
-integrate
-^^^^^^^^^
+# integrate
 
-integrates a ``xolotl`` model. Usage ::
+integrates a ``xolotl`` model. 
 
-   V = x.integrate;
-   I_clamp = x.integrate;
-   [V, Ca] = x.integrate;
-   [V, Ca, mech_state] = x.integrate;
-   [V, Ca, mech_state, I] = x.integrate;
-   [V, Ca, mech_state, I, syn_state] = x.integrate;
+Usage:
 
 
-``integrate`` will return different outputs as shown above. Unless you need every output, it is recommended to skip it, as it makes the integration faster (and reduces the memory footprint). 
+```
+x.output_type = 0;
+V = x.integrate;
+I_clamp = x.integrate;
+[V, Ca] = x.integrate;
+[V, Ca, mech_state] = x.integrate;
+[V, Ca, mech_state, I] = x.integrate;
+[V, Ca, mech_state, I, syn_state] = x.integrate;
 
-Explanation of outputs
-----------------------
+x.output_type = 1;
+results = x.integrate;
+
+x.output_type = 2;
+results_and_spiketimes = x.integrate;
+```
+
+
+``integrate`` will return different outputs as shown above. 
+Unless you need every output, it is recommended to skip it, 
+as it makes the integration faster (and reduces the memory footprint). 
+
+### Explanation of outputs
+
 
 - ``V`` Voltage trace of every compartment. A matrix of size (nsteps, n_comps)
 - ``I_clamp`` also returned in the first argument, this is the clamping current when a compartment is being voltage clamped. This can be inter-leaved with the voltage of other, non-clamped compartments. 
@@ -29,6 +42,11 @@ Explanation of outputs
 - ``mech_state`` a matrix representing every dimension of every mechanism in the tree. This matrix has size (nsteps, NC), where NC depends on the precise controllers used, and is automatically determined. 
 - ``I`` the currents of every ion channel type in the model. This is a matrix of size (nsteps, n_cond)
 
+!!! info "See Also"
+    ->xolotl.show
+    ->xolotl.plot
+    ->xolotl.transpile
+    ->xolotl.compile
 
 
 %}
